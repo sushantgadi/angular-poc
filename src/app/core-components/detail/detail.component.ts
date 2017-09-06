@@ -9,7 +9,7 @@ import { CoreServices } from "app/services/core.services";
 })
 export class DetailComponent implements OnInit {
 
-  id: number;
+  code: string;
   private sub: any;
 
   kagaziMstDtl: any = [];
@@ -18,11 +18,10 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.id = +params['id']; // (+) converts string 'id' to a number
-      // In a real app: dispatch action to load the details here.
+      this.code = params['code']; 
     });
 
-    this.coreServices.kagaziMstDtl( this.id)
+    this.coreServices.kagaziMstDtl( this.code)
       .subscribe(
       response => {
         //case for success

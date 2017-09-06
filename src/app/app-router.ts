@@ -7,14 +7,14 @@ import { DetailComponent } from "app/core-components/detail/detail.component";
 const APP_ROUTES: Routes = [
     {
         path: '',
-        redirectTo: '/home',
+        redirectTo: '/',
         pathMatch: 'full'
     },
     {
-        path: 'home', component: HomeComponent,
+        path: '', component: HomeComponent,
     },
     {
-        path: 'detail/:id', component: DetailComponent,
+        path: 'detail/:code', component: DetailComponent,
     },
     { path: '**', component: PageNotFoundComponent }
 ];

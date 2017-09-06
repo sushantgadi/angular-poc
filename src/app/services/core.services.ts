@@ -7,8 +7,11 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class CoreServices {
 
-    private _kagaziMstUrl = "https://kagazi-services.herokuapp.com/kagazi/core/kagazi-mst";
-    private _kagaziMstDtlUrl = "https://kagazi-services.herokuapp.com/kagazi/core/kagazi-mst-dtl/";
+   // private _kagaziMstUrl = "https://kagazi-services.herokuapp.com/kagazi/core/kagazi-mst";
+   // private _kagaziMstDtlUrl = "https://kagazi-services.herokuapp.com/kagazi/core/kagazi-mst-dtl/";
+
+    private _kagaziMstUrl = "http://localhost:8080/kagazi/core/kagazi-mst";
+    private _kagaziMstDtlUrl = "http://localhost:8080/kagazi/core/kagazi-mst-dtl/";
 
     //kagazi master end point
     constructor(private http: Http) { }
@@ -17,8 +20,8 @@ export class CoreServices {
     }
 
     //kagazi mst detail end point- fetch data using mst id
-    kagaziMstDtl(id: number) {
-        return this.http.get(this._kagaziMstDtlUrl+id).map((response: Response) => response.json());
+    kagaziMstDtl(code: string) {
+        return this.http.get(this._kagaziMstDtlUrl+code).map((response: Response) => response.json());
     }
 
 }
