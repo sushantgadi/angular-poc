@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HttpModule, Http } from '@angular/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './container-components/header/header.component';
@@ -29,7 +30,7 @@ import { DetailComponent } from './core-components/detail/detail.component';
      // App Routing
      routing
   ],
-  providers: [CoreServices],
+  providers: [CoreServices,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,11 +7,11 @@ import { DetailComponent } from "app/core-components/detail/detail.component";
 const APP_ROUTES: Routes = [
     {
         path: '',
-        redirectTo: '/',
+        redirectTo: '/home',
         pathMatch: 'full'
     },
     {
-        path: '', component: HomeComponent,
+        path: 'home', component: HomeComponent,
     },
     {
         path: 'detail/:code', component: DetailComponent,

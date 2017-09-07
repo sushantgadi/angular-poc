@@ -7,11 +7,11 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class CoreServices {
 
-   // private _kagaziMstUrl = "https://kagazi-services.herokuapp.com/kagazi/core/kagazi-mst";
-   // private _kagaziMstDtlUrl = "https://kagazi-services.herokuapp.com/kagazi/core/kagazi-mst-dtl/";
+   private _kagaziMstUrl = "https://kagazi-services.herokuapp.com/kagazi/core/kagazi-mst";
+   private _kagaziMstDtlUrl = "https://kagazi-services.herokuapp.com/kagazi/core/kagazi-mst-dtl/";
 
-    private _kagaziMstUrl = "http://localhost:8080/kagazi/core/kagazi-mst";
-    private _kagaziMstDtlUrl = "http://localhost:8080/kagazi/core/kagazi-mst-dtl/";
+    //private _kagaziMstUrl = "http://localhost:8080/kagazi/core/kagazi-mst";
+    //private _kagaziMstDtlUrl = "http://localhost:8080/kagazi/core/kagazi-mst-dtl/";
 
     //kagazi master end point
     constructor(private http: Http) { }
