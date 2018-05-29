@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /folder/
+Disallow: /file.html
+Disallow: /image.png
